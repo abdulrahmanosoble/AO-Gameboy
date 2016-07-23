@@ -1,2 +1,2 @@
 all:
-	g++ core.cpp execute.cpp mem.cpp -o emulator
+	g++ core.cpp execute.cpp -o emulator

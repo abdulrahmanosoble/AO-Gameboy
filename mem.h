@@ -1,37 +1,52 @@
-static union {
-	struct{
-		unsigned char F;
-		unsigned char A;
+#ifndef MEM_H
+
+#define MEM_H
+struct RegAF{
+	union{
+		struct{
+			unsigned char F;
+			unsigned char A;
+		};
+		unsigned short AF;
 	};
-	unsigned short AF;
 };
 
-static union {
-	struct{
-		unsigned char C;
-		unsigned char B;
+struct RegBC{
+	union{
+		struct{
+			unsigned char C;
+			unsigned char B;
+		};
+		unsigned short BC;
 	};
-	unsigned short BC;
 };
 
-static union {
-	struct{
-		unsigned char E;
-		unsigned char D;
+
+struct RegDE{
+	union{
+		struct{
+			unsigned char E;
+			unsigned char D;
+		};
+		unsigned short DE;
 	};
-	unsigned short DE;
 };
 
-static union {
-	struct{
-		unsigned char L;
-		unsigned char H;
+
+struct RegHL{
+	union{
+		struct{
+			unsigned char L;
+			unsigned char H;
+		};
+		unsigned short HL;
 	};
-	unsigned short HL;
 };
 
-unsigned short PC;
-unsigned short SP;
+extern unsigned short PC;
+extern unsigned short SP;
 
-unsigned char data[1000000];
-unsigned char mem[65536];
+extern unsigned char data[10000];
+extern unsigned char mem[65536];
+
+#endif
