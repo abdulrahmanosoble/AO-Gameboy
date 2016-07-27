@@ -49,4 +49,6 @@ extern unsigned short SP;
 extern unsigned char data[10000];
 extern unsigned char mem[65536];
 
+extern short cycles;
+
 #endif
