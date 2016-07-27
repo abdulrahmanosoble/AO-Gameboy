@@ -49,7 +49,7 @@ void GPU()
 		int index = 0;
 
 		for (int i = 0; i < 32; i++){
-			for (int j = 0; i < 32; j++){
+			for (int j = 0; j < 32; j++){
 				for (int x = 0; x < 8; x++){
 					for (int z = 0; z < 8; z++){
 						switch (tiles[mem[current]][x][z]){
